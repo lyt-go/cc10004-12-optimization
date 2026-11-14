@@ -1,0 +1,6 @@
+:5173 {
+	root * /usr/share/caddy
+	# SPA 深链（/diagnosis 等）回落到 index.html，避免刷新即 404
+	try_files {path} /index.html
+	file_server
+}

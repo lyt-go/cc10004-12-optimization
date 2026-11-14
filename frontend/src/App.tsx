@@ -8,6 +8,7 @@ import TouchpointView from './views/touchpoint'
 import AttributionView from './views/attribution'
 import RoiView from './views/roi'
 import ConversionView from './views/conversion'
+import DiagnosisView from './views/diagnosis'
 import UserpathView from './views/userpath'
 import RetentionView from './views/retention'
 import EventdefView from './views/eventdef'
@@ -21,7 +22,7 @@ import SentimentView from './views/sentiment'
 import LifecycleView from './views/lifecycle'
 import OpsalertView from './views/opsalert'
 
-const navItems = [{ label: "运营概览", path: "/" }, { label: "渠道管理", path: "/channel" }, { label: "投放活动", path: "/campaign" }, { label: "触点追踪", path: "/touchpoint" }, { label: "归因分析", path: "/attribution" }, { label: "ROI评估", path: "/roi" }, { label: "转化漏斗", path: "/conversion" }, { label: "用户路径", path: "/userpath" }, { label: "留存分析", path: "/retention" }, { label: "事件定义", path: "/eventdef" }, { label: "用户画像", path: "/profile" }, { label: "热力分析", path: "/heatmap" }, { label: "竞品对标", path: "/benchmark" }, { label: "数据审计", path: "/auditcheck" }, { label: "分流配置", path: "/abgroup" }, { label: "可视化配置", path: "/dataviz" }, { label: "舆情分析", path: "/sentiment" }, { label: "生命周期", path: "/lifecycle" }, { label: "运营预警", path: "/opsalert" }]
+const navItems = [{ label: "运营概览", path: "/" }, { label: "渠道管理", path: "/channel" }, { label: "投放活动", path: "/campaign" }, { label: "触点追踪", path: "/touchpoint" }, { label: "归因分析", path: "/attribution" }, { label: "ROI评估", path: "/roi" }, { label: "转化漏斗", path: "/conversion" }, { label: "转化路径诊断", path: "/diagnosis" }, { label: "用户路径", path: "/userpath" }, { label: "留存分析", path: "/retention" }, { label: "事件定义", path: "/eventdef" }, { label: "用户画像", path: "/profile" }, { label: "热力分析", path: "/heatmap" }, { label: "竞品对标", path: "/benchmark" }, { label: "数据审计", path: "/auditcheck" }, { label: "分流配置", path: "/abgroup" }, { label: "可视化配置", path: "/dataviz" }, { label: "舆情分析", path: "/sentiment" }, { label: "生命周期", path: "/lifecycle" }, { label: "运营预警", path: "/opsalert" }]
 
 export default function App() {
   const [operator] = useState('值班管理员')
@@ -51,6 +52,7 @@ export default function App() {
           <Route path="/attribution" element={<AttributionView />} />
           <Route path="/roi" element={<RoiView />} />
           <Route path="/conversion" element={<ConversionView />} />
+          <Route path="/diagnosis" element={<DiagnosisView />} />
           <Route path="/userpath" element={<UserpathView />} />
           <Route path="/retention" element={<RetentionView />} />
           <Route path="/eventdef" element={<EventdefView />} />

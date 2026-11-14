@@ -35,3 +35,38 @@ body { margin: 0; background: #f6f8fb; color: #1f2937; }
 .error-text { color: #b42318; }
 .status-legend { display: flex; flex-wrap: wrap; gap: 12px; margin: 0 0 10px; font-size: 12px; color: var(--muted); }
 .legend-item { background: #eef2f7; border-radius: 999px; padding: 2px 10px; }
+
+/* ===== 转化路径诊断 ===== */
+.page-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.page-actions a.btn { text-decoration: none; color: inherit; }
+.badge { display: inline-block; border-radius: 999px; padding: 1px 9px; font-size: 12px; background: #eef2f7; color: #334155; }
+.badge.warning { background: #fff4e5; color: #9a5b00; }
+.badge.success { background: #e7f6ee; color: #157347; }
+.badge.pending { background: #efe9fb; color: #5b3fa8; }
+.badge.muted { background: #f1f5f9; color: #475569; }
+.badge.info { background: #e6f0ff; color: #1f4fa8; }
+.diag-rule { display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 10px; }
+.diag-rule-item { background: #fff; border: 1px solid var(--border); border-radius: 6px; padding: 4px 10px; font-size: 12px; color: #334155; }
+.diag-note { background: #f0f6ff; border-left: 3px solid var(--brand); padding: 8px 12px; margin: 0 0 12px; font-size: 12px; color: #334155; }
+.diag-batch-list { display: flex; flex-direction: column; gap: 14px; }
+.diag-batch { background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 12px 14px; }
+.diag-batch[data-status="样本不足"] { border-left: 4px solid #d99000; }
+.diag-batch[data-status="已达标"] { border-left: 4px solid #157347; }
+.diag-batch[data-status="待复核"] { border-left: 4px solid #6d4fc4; }
+.diag-batch-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+.diag-window { display: block; margin-top: 2px; font-size: 12px; color: var(--muted); }
+.diag-badge-row { display: flex; flex-wrap: wrap; gap: 6px; }
+.diag-meta { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin: 10px 0; }
+.diag-meta div { background: #f8fafc; border-radius: 6px; padding: 6px 10px; }
+.diag-meta dt { font-size: 12px; color: var(--muted); }
+.diag-meta dd { margin: 2px 0 0; font-size: 13px; }
+.rate-value { font-weight: 600; }
+.muted-value { color: #9a5b00; }
+.diag-hint { color: var(--muted); font-size: 11px; }
+.diag-reason, .diag-reuse, .diag-superseded { margin: 4px 0; font-size: 12px; color: #334155; }
+.diag-reuse { color: #1f4fa8; }
+.diag-superseded { color: #6d4fc4; }
+.diag-steps { margin-top: 8px; }
+.diag-steps .drop-row td:nth-child(5) { color: #9a5b00; }
+.success-text { color: #157347; margin-left: 12px; }
+.error-text { margin-left: 12px; }

@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 import { downloadEntries, listEntries, moduleMeta, runAction as applyAction } from '@/api/local-service'
 import type { EntryRow } from '@/data/types'
@@ -86,6 +87,7 @@ export default function ConversionView() {
           <button className="btn" type="button" onClick={() => downloadEntries(meta.key)}>
             导出转化漏斗清单
           </button>
+          <Link className="btn" to="/diagnosis">查看转化路径诊断</Link>
         </div>
       </header>
 
